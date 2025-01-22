@@ -1,0 +1,74 @@
+:root {
+    --cor-de-fundo: #23486A;
+    --cor-de-borda: #5d9fb4;
+    --cor-de-div: #3B6790;
+    --cor-da-letra: #EFB036;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--cor-de-fundo);
+}
+
+.divGeral {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre as divs */
+    width: 100%; 
+    max-width: 500px; /* Define um limite para a largura */
+}
+
+h2 {
+    color: var(--cor-da-letra);
+    font-size: 8rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    line-height: 150px;
+    margin: 0;
+    padding: 0;
+}
+
+div#divContador {
+    background-color: var(--cor-de-div);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza o conteúdo */
+    width: 100%;
+    height: 150px;
+    border: 2px solid var(--cor-de-borda);
+    border-radius: 40px;
+}
+
+div#botoes{
+    justify-content: center;
+    padding-top: 10px;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    width: 50%;
+    height: 30%;
+    border-radius: 40px;
+    gap: 10px;
+}
+
+button{
+    background-color: var(--cor-de-div);
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 9rem;
+    height: 3rem;
+    border: 2px solid var(--cor-de-borda);
+    border-radius: 40px;
+
+}
+
+button:hover {
+    background-color: var(--cor-de-borda); /* Mudança de cor ao passar o mouse */
+}
