@@ -43,10 +43,29 @@
         }, 1000)
     }
 
+    function pausarTemporizador(){
+        clearInterval (temporizador)
+        temporizadorRodando = false
+        botaoIniciar.disabled = false
+        botaoPausar.disabled = true
+    }
 
-botaoIniciar.addEventListener('click', iniciouTemporizador())
+    function resetarTemporizador(){
+clearInterval(temporizador)
+temporizadorRodando = false
+minutos = 25
+segundos = 0
+atualizarDisplayTemporizador()
+botaoIniciar.disabled = false
+botaoPausar.disabled = true
+    }
 
 
+botaoIniciar.addEventListener('click', iniciouTemporizador)
+botaoPausar.addEventListener('click', pausarTemporizador)
+botaoReiniciar.addEventListener('click' , resetarTemporizador)
+
+atualizarDisplayTemporizador()
 
 }) ()
 
