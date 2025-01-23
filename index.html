@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
 </head>
 <body>
 
 <div class="divGeral">
+
+    <div id="botoes">
+        <button id="btnAjustar">Ajustar</button>
+    </div>
 
     <div id="divContador">
         <h2 id="cronometro">00:12</h2>
@@ -17,10 +22,32 @@
     </div>
 
     <div id="botoes">
-        <button id="btnIniciar">Começar</button>
-        <button id="btnPausar">Pausar</button>
-        <button id="btnReiniciar">Reiniciar</button>
+        <button id="btnIniciar"><i class="bi bi-play-fill"></i></button>
+        <button id="btnPausar"><i class="bi bi-pause-fill"></i></button>
+        <button id="btnReiniciar"><i class="bi bi-arrow-repeat"></i></button>
     </div>
+
+    <dialog id="popUpConfigurarId">
+    <div id="popUp">
+        <div id="popUpDentro">
+        <input type="number" id="inputMinutos" min="0" max="60">
+        :
+        <input type="number" id="inputSegundos" min="0" max="60"> 
+        </div id="botoes">
+
+        <div>
+            <input type="radio" id="Alarme1" name="opcaoAlarme" value="audios/Alarme-Digital.ogg" checked required>
+            <label for="Alarme1">Alarme Digital</label>
+
+            <input type="radio" id="Alarme2" name="opcaoAlarme" value="audios/Alarme-Analógico.ogg" required>
+            <label for="Alarme2"> Alarme Analógico</label>
+
+            <input type="radio" id="Alarme3" name="opcaoAlarme" value="audios/Alarme-Misterioso.ogg" required>
+            <label for="Alarme3">Alarme Misterioso</label>
+        </div>
+        <button type="submit" id="configurarTempo">Configurar</button>
+    </div>
+</dialog>
 </div>
 <script src="script.js"></script>
 </body>

@@ -3,6 +3,7 @@
     --cor-de-borda: #5d9fb4;
     --cor-de-div: #3B6790;
     --cor-da-letra: #EFB036;
+    --cor-da-letra-botao: #fff
 }
 
 body {
@@ -48,6 +49,7 @@ div#divContador {
 div#botoes{
     justify-content: center;
     padding-top: 10px;
+    padding-bottom: 10px;
     align-items: center;
     display: flex;
     margin: auto;
@@ -62,15 +64,97 @@ button{
     justify-content: center;
     align-items: center;
     margin: auto;
-    width: 9rem;
-    height: 3rem;
+    width: 10rem;
     border: 2px solid var(--cor-de-borda);
     border-radius: 40px;
-
+    color: var(--cor-da-letra-botao);
+    font-size: 1.5rem;
 }
 
 button:hover {
     background-color: var(--cor-de-borda); /* Mudança de cor ao passar o mouse */
 }
 
+div#popUp{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens internos horizontalmente */
+    gap: 20px; /* Espaçamento entre os elementos */
+}
+
+dialog {
+    align-items: center; /* Centraliza os itens internos horizontalmente */
+    justify-content: center;
+    width: 400px; /* Largura do dialog */
+    height: 300px; /* Altura do dialog */
+    padding: 20px; /* Espaçamento interno */
+    border: 2px solid var(--cor-de-borda); /* Borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: var(--cor-de-div); /* Cor de fundo */
+    color: var(--cor-da-letra-botao); /* Cor do texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+@media (max-width: 600px) {
+    dialog {
+        width: 90%; /* Ocupa 90% da largura da tela */
+        height: 45%;
+        padding: 5px; /* Reduz o espaçamento interno */
+        font-size: 0.9rem; /* Reduz o tamanho da fonte */
+    }
+} 
+
+.input-group {
+    display: flex;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 100px; /* Espaçamento entre os radio buttons */
+}
+
+
+/* Esconde o radio button padrão */
+input[type="radio"] {
+    display: none;
+}
+
+/* Estilo personalizado para o label (simula o radio button) */
+input[type="radio"] + label {
+    margin: 10px;
+    display: flex;
+    gap: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 2px solid var(--cor-de-borda);
+    border-radius: 10px;
+    background-color: var(--cor-de-div);
+    color: var(--cor-da-letra-botao);
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Estilo quando o radio button está selecionado */
+input[type="radio"]:checked + label {
+    border-color: var(--cor-de-borda);
+    color: var(--cor-da-letra);
+}
+
+/* Efeito hover */
+input[type="radio"] + label:hover {
+    background-color: var(--cor-de-borda);
+    border-color: var(--cor-de-borda);
+}
+
+input[type="number"] {
+    text-align: center;
+    padding: 10px;
+    font-size: 2rem;
+    border: 2px solid var(--cor-de-borda);
+    border-radius: 10px;
+    background-color: var(--cor-de-div);
+    color: var(--cor-da-letra);
+}
 
