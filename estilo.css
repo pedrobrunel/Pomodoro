@@ -19,14 +19,13 @@ body {
 .divGeral {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espaçamento entre as divs */
-    width: 100%; 
+    width: 90%; 
     max-width: 500px; /* Define um limite para a largura */
 }
 
 h2 {
     color: var(--cor-da-letra);
-    font-size: 8rem;
+    font-size: 6.5rem;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     line-height: 150px;
@@ -37,11 +36,13 @@ h2 {
 div#divContador {
     background-color: var(--cor-de-div);
     display: flex;
+    transform: scale(1);
     justify-content: center;
     align-items: center; /* Centraliza o conteúdo */
     height: 150px;
     border: 2px solid var(--cor-de-borda);
     border-radius: 40px;
+    transition: transform 0.3s ease;
 }
 
 div#botoes{
@@ -71,3 +72,5 @@ button{
 button:hover {
     background-color: var(--cor-de-borda); /* Mudança de cor ao passar o mouse */
 }
+
+
